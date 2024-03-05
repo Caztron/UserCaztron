@@ -4,34 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formularios</title>
-    <style>
-        body {
-            background-color: rgb(244, 234, 234);
-            font-family: Arial, Helvetica, sans-serif;
-            color: rgb(16, 13, 13);
-        }
-    </style>
+    <link rel="stylesheet" href="estilo/style.css">
 </head>
 <body>
     <h1>Pesquisa de Desenvolvimento </h1>
-    <form action="cadastro.php" method="get"  autocomplete="off">
+    <form action="cadastro.php" method="get"  autocomplete="on">
         <p>
             <label for="inome">Nome</label> 
-            <input type="text" name="nome" id="inome"></p>
+            <input type="text" name="nome" id="inome" autocomplete="username" required minlength="5" maxlength="30" placeholder="Digite seu nome">
+        </p>
         <p>
             <label for="isobrenome">Sobrenome</label> 
-            <input type="text" name="sobrenome" id="isobrenome">
+            <input type="text" name="sobrenome" id="isobrenome" autocomplete="lastname" required minlength="5" maxlength="30" placeholder="Digite seu sobrenome">
         </p>
         <p>
             <label for="iemail"> Email:</label>
-            <input type="email" name="email" id="iemail">
-        </p>
-        <p>
-            <input type="submit" value="Enviar">
+            <input type="email" name="email" id="iemail" autocomplete="email" placeholder="Email válido">
         </p>
         <p>
             <label for="inumero">Celular:</label>
-            <input type="number" name="telefone" id="inumero">
+            <input type="number" name="telefone" id="inumero" autocomplete="cc-number" placeholder="Apenas os números">
         </p>
         <p>
             <label for="icartao">Numero do cartão:</label>
@@ -40,6 +32,9 @@
         <p>
             <label for="icodigo">Codigo do cartão:</label>
             <input type="number" name="codigo" id="icodigo">
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
         </p>
     </form>
     
