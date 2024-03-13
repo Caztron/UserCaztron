@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+/*Todas as demais medias*/
+
+@media print {
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+    main {
+        border: 2px solid black;
+        width: 90vw;
+    }
+    main::after {
+        content: 'Esse site foi feito por @Caztron';
+        text-decoration: overline;
+    }
+    main h1 {
+        color: black;
+        text-shadow: none;
+    }
+    body /*Desnecessario, impressão não tem background*/{
+        background-image: url(../imagens/back-print.jpg);
+    }
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: block;}
+    img#desktop {display: none;}
+    img#TV {display: none;}
+   
+}
+
+@media screen and (min-width: 768px) and (max-width:992px) {
+    /*Configuração para tablet*/
+    body {
+        background-image: url(../imagens/back-tablet.jpg);
+    }
+    img#phone {display: none;}
+    img#tablet {display: block;}
+    img#print {display: none;}
+    img#desktop {display: none;}
+    img#TV {display: none;}
+    
+}
+
+@media screen and (min-width:992px) and (max-width:1200px) {
+    /*Configuração para computadores*/
+    body {
+        background-image: url(../imagens/back-pc.jpg);
+    }
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#desktop {display: block;}
+    img#TV {display: none;}
+    
+}
+
+@media screen and (min-width:1200px) {
+    /*Configuração para grandes telas*/
+    body {
+        background-image: url(../imagens/back-tv.jpg);
+    }
+    img#phone {display: none;}
+    img#tablet {display: none;}
+    img#print {display: none;}
+    img#desktop {display: none;}
+    img#TV {display: block;}
+    
+}
